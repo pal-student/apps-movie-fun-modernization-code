@@ -1,0 +1,9 @@
+applications:
+- name: moviefun-app
+  path: ./build/libs/moviefun-1.1.0-SNAPSHOT.war
+  host: moviefun-sverov
+  memory: 1G
+  instances: 1
+  services:
+  - moviefun-sverov-db
+  - moviefun-s3
