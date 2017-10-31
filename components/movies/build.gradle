@@ -1,0 +1,23 @@
+apply plugin: "java"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+apply from: "../../build.gradle"
+
+
+dependencies {
+    compile "org.springframework:spring-core:$springVersion"
+    compile "org.springframework:spring-context:$springVersion"
+    compile "org.springframework:spring-tx:$springVersion"
+    compile "org.springframework:spring-web:$springVersion"
+
+    compile "org.hibernate:hibernate-core:$hibernateVersion"
+    compile "javax.servlet:javax.servlet-api:3.1.0"
+    compile "org.slf4j:slf4j-api:$slf4jVersion"
+    compile "commons-lang:commons-lang:2.4"
+}
