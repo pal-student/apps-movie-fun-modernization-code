@@ -31,6 +31,7 @@ public class AlbumsBean {
 
     @Transactional
     public void addAlbum(Album album) {
+        album.setId(null); //it has to be new entity
         entityManager.persist(album);
     }
 

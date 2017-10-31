@@ -8,12 +8,13 @@ version = "1.1.0-SNAPSHOT"
 description = "OpenEJB :: Web Examples :: Moviefun"
 
 dependencies {
-    compile project(":components:movies")
-    compile project(":components:albums")
+
+    compile project(":components:movie-api")
+    compile project(":components:album-api")
 
     compile "org.springframework.boot:spring-boot-starter-web"
     compile "org.springframework.boot:spring-boot-starter-tomcat"
-    compile "org.springframework.boot:spring-boot-starter-data-jpa"
+//    compile "org.springframework.boot:spring-boot-starter-data-jpa"
 
     compile "com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.7.0"
     compile "taglibs:standard:1.1.2"
@@ -28,3 +29,12 @@ dependencies {
 
     testCompile "junit:junit:$junitVersion"
 }
+
+bootRun.environment([
+        "S3_ENDPOINTURL": "http://127.0.0.1:9000",
+        "S3_ACCESSKEY": "3L7VJZFFNJL6EWXHNH0J",
+        "S3_SECRETKEY": "0MEofzt4tcV7Ri3oo+mLM2Fefl8D4crFvQdK1GhN",
+        "S3_BUCKETNAME": "moviefun",
+        "MOVIES_URL": "http://localhost:8082",
+        "ALBUMS_URL": "http://localhost:8083"
+])
