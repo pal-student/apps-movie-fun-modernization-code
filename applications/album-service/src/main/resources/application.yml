@@ -1,12 +1,16 @@
 server.port: 8081
 
 spring:
+  application:
+    name: album-service-sverov
+
   jpa:
     properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
 
   datasource:
     url: jdbc:mysql://localhost:3306/albums?useSSL=false
-    username: root
+    username: pal
+    passwod: pal
 
 logging.level:
   root: WARN
