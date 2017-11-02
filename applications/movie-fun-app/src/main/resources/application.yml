@@ -1,6 +1,6 @@
 spring:
   application:
-    name: movie-fun-app
+    name: moviefun-app
 
   mvc.view:
     prefix: /WEB-INF/
@@ -9,11 +9,14 @@ spring:
 logging.level:
   root: WARN
   org.superbiz.moviefun: DEBUG
+  org.springframework.web: DEBUG
+  org.apache.http: DEBUG
 
 s3:
-  accessKey: <access key id>
-  secretKey: <secret access key>
-  bucketName: <name of the bucket>
+  endpointUrl: http://127.0.0.1:9000
+  accessKey: 3L7VJZFFNJL6EWXHNH0J
+  secretKey: 0MEofzt4tcV7Ri3oo+mLM2Fefl8D4crFvQdK1GhN
+  bucketName: moviefun
 
 security:
   basic:
